@@ -1,7 +1,8 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "druidcraft:block_altar"
+    "custom": { "flip-v": true },
+    "model": "druidcraft:altar.obj"
   },
   "variants": {
     "normal": [{}],

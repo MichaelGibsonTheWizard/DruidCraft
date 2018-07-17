@@ -3,6 +3,7 @@ package druidcraft.proxy;
 import druidcraft.Config;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -33,13 +34,6 @@ public class CommonProxy {
         }
     }
 
-    @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block> event) {
-
-    }
-
-    @SubscribeEvent
-    public static void registerItems(RegistryEvent.Register<Item> event) {
-
+    public void registerItemRenderer(Item item, int meta, String id) {
     }
 }

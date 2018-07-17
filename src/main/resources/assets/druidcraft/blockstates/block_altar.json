@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "druidcraft:block_altar"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}

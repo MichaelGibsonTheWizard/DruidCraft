@@ -1,6 +1,8 @@
 package druidcraft.proxy;
 
 import druidcraft.DruidCraft;
+import druidcraft.block.BlockAltar;
+import druidcraft.block.ModBlocks;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -24,6 +26,11 @@ public class ClientProxy extends CommonProxy {
     public void registerItemRenderer(Item item, int meta, String id) {
         ModelLoader.setCustomModelResourceLocation(item, meta,
                 new ModelResourceLocation(DruidCraft.MOD_ID + ':' + id, "inventory"));
+    }
+
+    @SubscribeEvent
+    public static void registerModels(ModelRegistryEvent event) {
+        ModBlocks.registerModels();
     }
 
 }

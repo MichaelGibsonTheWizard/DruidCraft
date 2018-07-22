@@ -18,8 +18,11 @@ public class ModBlocks {
                 blockAltar.createItemBlock()
         );
     }
-
     public static void registerModels() {
+        blockAltar.initModel();
+    }
+
+    public static void registerItemModels() {
         blockAltar.registerItemModel(Item.getItemFromBlock(blockAltar));
     }
 }

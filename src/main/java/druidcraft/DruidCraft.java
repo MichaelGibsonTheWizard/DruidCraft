@@ -61,7 +61,7 @@ public class DruidCraft {
         @SubscribeEvent
         public static void registerModels(ModelRegistryEvent event) {
             ModItems.registerModels();
-            ModBlocks.registerModels();
+            ModBlocks.registerItemModels();
         }
     }
 }

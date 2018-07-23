@@ -4,18 +4,71 @@
     "custom": { "flip-v": true }
   },
   "variants": {
-    "is_sphere=false": {
+    "element=0,is_sphere=false": {
       "model": "druidcraft:altar.obj",
       "textures": {
         "#None": "druidcraft:blocks/block_altar"
       }
     },
-    "is_sphere=true": {
+    "element=0,is_sphere=true": {
       "model": "druidcraft:sphere.obj",
       "textures": {
         "#None": "blocks/glass"
       }
     },
-    "inventory": {"model": "druidcraft:altar.obj"}
+    "element=1,is_sphere=false": {
+      "model": "druidcraft:altar.obj",
+      "textures": {
+        "#None": "druidcraft:blocks/red"
+      }
+    },
+    "element=1,is_sphere=true": {
+      "model": "druidcraft:sphere.obj",
+      "textures": {
+        "#None": "blocks/glass"
+      }
+    },
+    "element=2,is_sphere=false": {
+      "model": "druidcraft:altar.obj",
+      "textures": {
+        "#None": "druidcraft:blocks/block_altar"
+      }
+    },
+    "element=2,is_sphere=true": {
+      "model": "druidcraft:sphere.obj",
+      "textures": {
+        "#None": "blocks/glass"
+      }
+    },
+    "element=3,is_sphere=false": {
+      "model": "druidcraft:altar.obj",
+      "textures": {
+        "#None": "druidcraft:blocks/block_altar"
+      }
+    },
+    "element=3,is_sphere=true": {
+      "model": "druidcraft:sphere.obj",
+      "textures": {
+        "#None": "blocks/glass"
+      }
+    },
+    "element=4,is_sphere=false": {
+      "model": "druidcraft:altar.obj",
+      "textures": {
+        "#None": "druidcraft:blocks/block_altar"
+      }
+    },
+    "element=4,is_sphere=true": {
+      "model": "druidcraft:sphere.obj",
+      "textures": {
+        "#None": "blocks/glass"
+      }
+    },
+    "inventory": {
+      "model": "druidcraft:altar.obj",
+      "textures": {
+        "#None": "druidcraft:blocks/block_altar"
+      }
+    }
   }
 }

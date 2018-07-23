@@ -29,14 +29,14 @@ import javax.annotation.Nullable;
 
 public class BlockAltar extends BlockBase implements ITileEntityProvider {
     public static final IProperty<Boolean> IS_SPHERE = PropertyBool.create("is_sphere");
-    //public static final PropertyInteger ELEMENT = PropertyInteger.create("element", 0, 4);
+    public static final PropertyInteger ELEMENT = PropertyInteger.create("element", 0, 4);
 
     public BlockAltar(String name) {
         super(Material.ANVIL, name);
         setHardness(3f);
         setResistance(5f);
 
-        //setDefaultState(blockState.getBaseState().withProperty(ELEMENT, 0));
+        setDefaultState(blockState.getBaseState().withProperty(ELEMENT, 0));
         setDefaultState(blockState.getBaseState().withProperty(IS_SPHERE, false));
     }
 
@@ -85,20 +85,19 @@ public class BlockAltar extends BlockBase implements ITileEntityProvider {
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState();
+        return getDefaultState()
                 //.withProperty(IS_SPHERE, (meta & 8) != 0);
-                //.withProperty(ELEMENT, meta & ~8);
+                .withProperty(ELEMENT, meta & ~8);
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        return 0;
-        //return (state.getValue(IS_SPHERE) ? 8 : 0); // Necessary inverse of the getStateFromMeta operation.
+        return state.getValue(ELEMENT);
     }
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, IS_SPHERE);
+        return new BlockStateContainer(this, IS_SPHERE, ELEMENT);
     }
 
     @Nullable
@@ -110,7 +109,6 @@ public class BlockAltar extends BlockBase implements ITileEntityProvider {
     private TileEntityAltar getTE(World world, BlockPos pos) {
         return (TileEntityAltar) world.getTileEntity(pos);
     }
-    /*
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (!worldIn.isRemote) {
@@ -122,5 +120,4 @@ public class BlockAltar extends BlockBase implements ITileEntityProvider {
         }
         return true;
     }
-    */
 }
